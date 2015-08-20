@@ -19,6 +19,9 @@ def dump_env
     end
   end
 
+  # ensure env is sorted otherwise the keys will be out of order
+  env = env.sort.to_h
+
   # binding.pry
 
   result = JSON.pretty_generate env
